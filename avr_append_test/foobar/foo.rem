@@ -1,0 +1,4 @@
+sw_package.set_src("src/foo.c")
+sw_package.set_inc("inc")
+sw_package.set_arch("arm")
+sw_package.set_mach("stm32f3")

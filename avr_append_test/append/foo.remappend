@@ -1,0 +1,16 @@
+#sw_package.set_dep("openmicromake gpio_common cordic")
+
+# set arch to avr
+sw_package.reset_var("arch")
+sw_package.set_arch("avr")
+
+# set mach to atmega168
+sw_package.reset_var("mach")
+sw_package.set_mach("atmega168")
+
+# Add additional src
+sw_package.set_src("src/bar.c")
+
+#sw_package.reset_var("linker_script")
+#sw_package.set_linker_script("blablabla")
+#sw_package.reset_var("test2")

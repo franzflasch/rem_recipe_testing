@@ -1,0 +1,28 @@
+sw_package.set_src("src/blinky.c")
+sw_package.set_dep("openmicromake gpio_common foo")
+
+if global_config.get_mach() == "atmega168"
+	sw_package.set_dep("ATMEGA168 OMM_mach_avr8_common")
+	sw_package.set_global_define("F_CPU=8000000")
+end
+
+if global_config.get_mach() == "stm32f1"
+	sw_package.set_dep("STM32F1 OMM_mach_stm32_common")
+	sw_package.set_global_define("STM32F1")
+end
+
+if global_config.get_mach() == "stm32f3"
+	sw_package.set_dep("STM32F3 OMM_mach_stm32_common")
+	sw_package.set_global_define("STM32F3")
+	#sw_package.set_def("STM32F3")
+end
+
+if global_config.get_mach() == "stm32f4"
+	sw_package.set_dep("STM32F4 OMM_mach_stm32_common")
+	sw_package.set_global_define("STM32F4")
+	#sw_package.set_def("STM32F3")
+end
+
+if global_config.get_mach() == "linux"
+	sw_package.set_dep("mach_linux")
+end
