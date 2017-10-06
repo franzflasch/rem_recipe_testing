@@ -1,0 +1,1 @@
+sw_package.set_dep("global_dep_test")

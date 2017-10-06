@@ -1,0 +1,2 @@
+global_config.set_global_dep("global_dep_test3")
+sw_package.set_dep("global_dep_test2")
