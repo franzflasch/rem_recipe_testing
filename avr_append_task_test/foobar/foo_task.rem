@@ -1,0 +1,8 @@
+sw_package.set_src("src/foo.c")
+sw_package.set_inc("inc")
+sw_package.set_arch("arm")
+sw_package.set_mach("stm32f3")
+
+sw_package.override_func :do_compile do
+    execute "echo hello from the base recipe"
+end
